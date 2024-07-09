@@ -21,11 +21,11 @@ def edit_file(file_name):
         print(f"\n\n...End editing {file_name}")
 
 
-print("Welcome to Jia REPL! Enter 'exit' to exit...")
+print("Welcome to Jia! Enter 'exit' to exit...")
 while True:
     user_input = input("Jia> ")
     if user_input.lower() == "jia":
-        print("Welcome to Jia! Type 'exit' to quit.\n")
+        print("Welcome to Jia REPL! Type 'exit' to quit.\n")
         run_jia("")
     
     elif user_input.lower() == "exit":
