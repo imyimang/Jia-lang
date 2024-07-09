@@ -58,15 +58,23 @@ def simplebrain(code):
 
     return ''.join(output), tape_output
 
-def run_jia():
-    while True:
-        user_input = input(">>> ")
-        if user_input.lower() == "exit":break
-        result, final_tape = simplebrain(user_input)
+def run_jia(content):
+    if content:
+        result, final_tape = simplebrain(content)
         print("=============================================")
         print(result)
         print("=============================================")
         print("Jia's tape:")
         print(final_tape)
+    else:
+        while True:
+            user_input = input(">>> ")
+            if user_input.lower() == "exit":break
+            result, final_tape = simplebrain(user_input)
+            print("=============================================")
+            print(result)
+            print("=============================================")
+            print("Jia's tape:")
+            print(final_tape)
 
 
