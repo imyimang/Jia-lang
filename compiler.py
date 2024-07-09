@@ -1,7 +1,5 @@
 from repl import run_jia 
 import os,re,sys
-import subprocess
-
 
 def edit_file(file_name):
     with open(file_name, "a+", encoding='utf-8') as f:
