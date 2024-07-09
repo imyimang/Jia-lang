@@ -2,19 +2,23 @@ from repl import run_jia
 import os,re,sys
 
 def edit_file(file_name):
-    with open(file_name, "a+", encoding='utf-8') as f:
-        print(f"Editing {file_name}, Press Ctrl+C to exit...\n")
-        f.seek(0)
-        print(f.read(),end="")
-        f.seek(0, 2)
-        input_lines = []
-        try:
+    try:
+        with open(file_name, "r+", encoding='utf-8') as f:
+            print(f"Editing {file_name}, Press Ctrl+C to exit...\n")
+            print(f.read(), end="")
+            f.seek(0, 2)
+            input_lines = []
             while True:
                 line = sys.stdin.readline().rstrip('\n')
+                if line == '':continue
                 input_lines.append(line)
+                
+    except KeyboardInterrupt:
+        with open(file_name, "r+", encoding='utf-8') as f:
+            f.seek(0, 2) 
+            for line in input_lines:
                 f.write("\n" + line)
-        except KeyboardInterrupt:
-            print(f"\n\n...End editing {file_name}")
+        print(f"\n\n...End editing {file_name}")
 
 
 print("Welcome to Jia! Enter 'exit' to exit...")
