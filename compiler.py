@@ -2,11 +2,11 @@ from repl import run_jia
 import os,re,sys
 
 
-def edit_file(file_name):
+def append_file(file_name):
     input_lines = []
     try:
         with open(file_name, "a+", encoding='utf-8') as f:
-            print(f"Editing {file_name}, Press Ctrl+C to exit...\n")
+            print(f"Appending {file_name}, Press Ctrl+C to exit...\n")
             f.seek(0)
             print(f.read(), end="")
             while True:
@@ -16,7 +16,7 @@ def edit_file(file_name):
         with open(file_name, "a+", encoding='utf-8') as f:
             for line in input_lines:
                 f.write(line + "\n")
-        print(f"\n\n...End editing {file_name}")
+        print(f"\n\n...End appending {file_name}")
     
 def translate_file(file_name):
     print(f"Start translating Jia code to {file_name}(only supports ASCII 0~127), Press Ctrl+Z to exit:")
@@ -74,13 +74,13 @@ while True:
             print("Error: Invalid file name")
 
 
-    elif list(user_input.split(" "))[0].lower() == "edit" and len(list(user_input.split(" "))) == 2:
+    elif list(user_input.split(" "))[0].lower() == "append" and len(list(user_input.split(" "))) == 2:
         inputs = list(user_input.split(" "))
         if re.match(r"[^\.]+\.(jia|txt)", inputs[1]):
-            edit_file(inputs[1])
+            append_file(inputs[1])
 
         elif re.match(r"^[^.]*$", inputs[1]):
-            edit_file(f"{inputs[1]}.jia")
+            append_file(f"{inputs[1]}.jia")
         
         else:
             print("Error: Invalid file name")

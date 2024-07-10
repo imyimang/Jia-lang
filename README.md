@@ -28,7 +28,7 @@
 - ### `run <file_name>`
     - 執行指定的檔案，僅支援 `.txt` 和 `.jia`，如果沒有設定副檔名，預設情況下會先找尋 `<file name>.jia` 再找尋 `<file name>.txt`，如果兩者皆不存在則報錯
 
-- ### `edit <file name>`
+- ### `append <file name>`
     - 在指定的檔案追加文字，僅支援 `.txt` 和 `.jia`，如果沒有設定副檔名，預設情況下會先找尋 `<file name>.jia` 再找尋 `<file name>.txt`，如果兩者皆不存在則創建 `<file name>.jia`，**該功能只能追加文字，無法編輯先前寫的內容**，按下 `Ctrl + C` 來結束編輯
 
 - ### `translate <file name>`
