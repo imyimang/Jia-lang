@@ -38,5 +38,3 @@
 
 ## 執行
 執行 `compiler.py`
-
-# Not done yet
