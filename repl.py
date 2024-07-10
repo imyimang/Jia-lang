@@ -37,7 +37,7 @@ def simplebrain(code):
         elif command == '由':
             output.append(chr(tape[pointer]))
         elif command == '甲':
-            tape[pointer] = ord(input("Input a character: ")[0])
+            tape[pointer] = ord(input(f"Input a character in [{pointer}]: ")[0])
             max_used_pointer = max(max_used_pointer, pointer)
         elif command == '始':
             if tape[pointer] == 0:
