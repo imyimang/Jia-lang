@@ -19,7 +19,7 @@ def edit_file(file_name):
         print(f"\n\n...End editing {file_name}")
     
 def translate_file(file_name):
-    print("Start translating Jia code (only supports ASCII 0~127), Press Ctrl+Z to exit:")
+    print(f"Start translating Jia code to {file_name}(only supports ASCII 0~127), Press Ctrl+Z to exit:")
     user_input = sys.stdin.read()
 
     with open(file_name, "w", encoding='utf-8') as f:
