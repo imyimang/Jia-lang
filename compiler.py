@@ -47,7 +47,7 @@ while True:
     elif user_input.lower() == "help":
         print("jia                      open jia REPL")       
         print("run <file name>          run a .jia or .txt file") 
-        print("append <file name>         append a .jia or .txt file")
+        print("append <file name>       append a .jia or .txt file")
         print("translate <file name>    translate user input to Jia code")    
 
     elif list(user_input.split(" "))[0].lower() == "run" and len(list(user_input.split(" "))) == 2:
