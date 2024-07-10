@@ -1,7 +1,7 @@
 # 甲語言 Jia
 一個基於brainfuck改編而成的程式語言
 
-[![video](image.png)](https://www.youtube.com/watch?v=OxkGTnpz-00)
+![video](https://www.youtube.com/watch?v=OxkGTnpz-00)
 ## 程式語法
 `由` 輸出，對應brainfuck中的`.`
 
