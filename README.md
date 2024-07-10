@@ -34,6 +34,7 @@
 
 - ### `translate <file name>`
     - 將字母轉換成Jia程式並寫入到指定檔案，僅支援 `.txt` 和 `.jia`，如果沒有設定副檔名，預設情況下會先找尋 `<file name>.jia` 再找尋 `<file name>.txt`，如果兩者皆不存在則創建 `<file name>.jia`，如果沒有提供任何文字則創建 `new_file.jia`，**僅提供覆寫不提供追加**，按下 `Ctrl + Z` 來結束轉換
+    - 僅支援 ASCii 0~127 的符號，其他符號將會被強制轉換為 `?`
 
 ## 執行
 執行 `compiler.py`
