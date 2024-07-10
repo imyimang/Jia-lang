@@ -68,6 +68,11 @@ while True:
         else:
             print("Error: Invalid file name")
 
+    elif user_input.lower() == "help":
+        print("jia                   open jia REPL")       
+        print("run <file name>       run a .jia or .txt file") 
+        print("edit <file name>      append a .jia or .txt file")
+
     else:
         print("Error: Invalid command")
 
