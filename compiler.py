@@ -3,7 +3,7 @@ import os,re,sys
 
 def edit_file(file_name):
     try:
-        with open(file_name, "r+", encoding='utf-8') as f:
+        with open(file_name, "a+", encoding='utf-8') as f:
             print(f"Editing {file_name}, Press Ctrl+C to exit...\n")
             print(f.read(), end="")
             f.seek(0, 2)
@@ -59,7 +59,6 @@ while True:
     elif list(user_input.split(" "))[0].lower() == "edit" and len(list(user_input.split(" "))) == 2:
         inputs = list(user_input.split(" "))
         if re.match(r"[^\.]+\.(jia|txt)", inputs[1]):
-            root, extension = os.path.splitext(inputs[1])
             edit_file(inputs[1])
 
         elif re.match(r"^[^.]*$", inputs[1]):
