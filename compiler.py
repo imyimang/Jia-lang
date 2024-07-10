@@ -3,23 +3,17 @@ import os,re,sys
 
 
 def append_file(file_name):
-    input_lines = []
-    try:
-        with open(file_name, "a+", encoding='utf-8') as f:
-            print(f"Appending {file_name}, Press Ctrl+C to exit...\n")
-            f.seek(0)
-            print(f.read(), end="")
-            while True:
-                line = sys.stdin.readline().rstrip('\n')
-                input_lines.append(line)
-    except KeyboardInterrupt:
-        with open(file_name, "a+", encoding='utf-8') as f:
-            for line in input_lines:
-                f.write(line + "\n")
-        print(f"\n\n...End appending {file_name}")
+    print(f"Appending {file_name}, Press Ctrl + Z + Enter to exit...\n")
+    with open(file_name, "a+", encoding='utf-8') as f:
+        f.seek(0)
+        print(f.read(), end="")
+        user_input = sys.stdin.read()
+        f.seek(0,2)
+        f.write(user_input)
+    print(f"\n\n...End appending {file_name}")    
     
 def translate_file(file_name):
-    print(f"Start translating Jia code to {file_name}(only supports ASCII 0~127), Press Ctrl+Z to exit:")
+    print(f"Start translating Jia code to {file_name}(only supports ASCII 0~127), Press Ctrl + Z + Enter to exit:")
     user_input = sys.stdin.read()
 
     with open(file_name, "w", encoding='utf-8') as f:
