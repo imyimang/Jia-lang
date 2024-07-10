@@ -1,6 +1,11 @@
 # 甲語言 Jia
 一個基於brainfuck改編而成的程式語言
-![example](example.mp4)
+
+<video controls>
+  <source src="example.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## 程式語法
 `由` 輸出，對應brainfuck中的`.`
 
