@@ -32,7 +32,7 @@
     - 在指定的檔案追加文字，僅支援 `.txt` 和 `.jia`，如果沒有設定副檔名，預設情況下會先找尋 `<file name>.jia` 再找尋 `<file name>.txt`，如果兩者皆不存在則創建 `<file name>.jia`，**該功能只能追加文字，無法編輯先前寫的內容**，按下 `Ctrl + C` 來結束編輯
 
 - ### `translate <file name>`
-    - 將字母轉換成Jia程式並寫入到指定檔案，僅支援 `.txt` 和 `.jia`，如果沒有設定副檔名，預設情況下會先找尋 `<file name>.jia` 再找尋 `<file name>.txt`，如果兩者皆不存在則創建 `<file name>.jia`，**僅提供覆寫不提供追加**，按下 `Ctrl + Z` 來結束轉換
+    - 將字母轉換成Jia程式並寫入到指定檔案，僅支援 `.txt` 和 `.jia`，如果沒有設定副檔名，預設情況下會先找尋 `<file name>.jia` 再找尋 `<file name>.txt`，如果兩者皆不存在則創建 `<file name>.jia`，如果沒有任何文字則創建 `new_file.jia`，**僅提供覆寫不提供追加**，按下 `Ctrl + Z` 來結束轉換
 
 ## 執行
 執行 `compiler.py`
