@@ -23,7 +23,7 @@ def translate_file(file_name):
                 ascii_value = 63 
             code = "申" * ascii_value 
             f.write(code)
-            f.write("由右\n") 
+            f.write("由\n右") 
     print(f"...Conversion completed and saved to {file_name}")
 
 
